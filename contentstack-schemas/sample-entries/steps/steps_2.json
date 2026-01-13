@@ -1,0 +1,31 @@
+{
+  "entry": {
+    "title": "Daily Steps - January 14, 2026",
+    "steps": [
+      {
+        "step_title": "Morning routine",
+        "description": "Start your day mindfully",
+        "order": 1
+      },
+      {
+        "step_title": "Move your body",
+        "description": "15 minutes of physical activity",
+        "order": 2
+      },
+      {
+        "step_title": "Connect with someone",
+        "description": "Reach out to a friend or colleague",
+        "order": 3
+      },
+      {
+        "step_title": "Express gratitude",
+        "description": "Write down 3 things you're grateful for",
+        "order": 4
+      }
+    ],
+    "date": "2026-01-14",
+    "active": false,
+    "tags": [],
+    "locale": "en-us"
+  }
+}

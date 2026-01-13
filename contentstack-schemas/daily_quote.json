@@ -1,0 +1,77 @@
+{
+  "content_type": {
+    "title": "Daily Quote",
+    "uid": "daily_quote",
+    "schema": [
+      {
+        "display_name": "Title",
+        "uid": "title",
+        "data_type": "text",
+        "mandatory": true,
+        "unique": false,
+        "multiple": false,
+        "field_metadata": {
+          "_default": true,
+          "instruction": "Internal title for this quote entry"
+        }
+      },
+      {
+        "display_name": "Quote Text",
+        "uid": "quote_text",
+        "data_type": "text",
+        "mandatory": true,
+        "unique": false,
+        "multiple": false,
+        "field_metadata": {
+          "description": "The inspirational quote text",
+          "instruction": "Enter the quote text (without quotation marks)"
+        }
+      },
+      {
+        "display_name": "Author",
+        "uid": "author",
+        "data_type": "text",
+        "mandatory": true,
+        "unique": false,
+        "multiple": false,
+        "field_metadata": {
+          "description": "Author of the quote",
+          "instruction": "Enter the author's full name"
+        }
+      },
+      {
+        "display_name": "Date",
+        "uid": "date",
+        "data_type": "isodate",
+        "mandatory": false,
+        "unique": false,
+        "multiple": false,
+        "field_metadata": {
+          "description": "Date this quote should be displayed",
+          "instruction": "Optional: Select a specific date for this quote"
+        }
+      },
+      {
+        "display_name": "Active",
+        "uid": "active",
+        "data_type": "boolean",
+        "mandatory": false,
+        "unique": false,
+        "multiple": false,
+        "field_metadata": {
+          "description": "Whether this quote is currently active",
+          "instruction": "Enable to make this the current quote"
+        }
+      }
+    ],
+    "options": {
+      "title": "title",
+      "publishable": true,
+      "is_page": false,
+      "singleton": false,
+      "sub_title": ["author"],
+      "url_pattern": "/:title",
+      "url_prefix": "/quotes/"
+    }
+  }
+}

@@ -1,0 +1,17 @@
+{
+  "command": "auth:login",
+  "module": "login",
+  "userId": "5c5af5ac-a31f-521a-a8f7-92f87ea37ff5",
+  "email": "",
+  "sessionId": "k7AEUwTpNToGEnxguLPfFK",
+  "apiKey": "",
+  "orgId": "",
+  "authenticationMethod": "",
+  "startTimestamp": "2026-01-13T13:16:27.484Z",
+  "MachineEnvironment": {
+    "nodeVersion": "v18.20.8",
+    "os": "darwin",
+    "hostname": "RohanNaik-Mac",
+    "CLI_VERSION": "1.54.0"
+  }
+}

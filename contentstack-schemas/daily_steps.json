@@ -1,0 +1,103 @@
+{
+  "content_type": {
+    "title": "Daily Steps",
+    "uid": "daily_steps",
+    "schema": [
+      {
+        "display_name": "Title",
+        "uid": "title",
+        "data_type": "text",
+        "mandatory": true,
+        "unique": false,
+        "multiple": false,
+        "field_metadata": {
+          "_default": true,
+          "instruction": "Internal title for this steps collection (e.g., 'Steps for January 13, 2026')"
+        }
+      },
+      {
+        "display_name": "Steps",
+        "uid": "steps",
+        "data_type": "group",
+        "mandatory": true,
+        "unique": false,
+        "multiple": true,
+        "field_metadata": {
+          "description": "Collection of daily growth steps",
+          "instruction": "Add 3-5 small actionable steps for daily growth"
+        },
+        "schema": [
+          {
+            "display_name": "Step Title",
+            "uid": "step_title",
+            "data_type": "text",
+            "mandatory": true,
+            "unique": false,
+            "multiple": false,
+            "field_metadata": {
+              "description": "Short title for the step",
+              "instruction": "e.g., 'Plan your day', 'Learn one new thing'"
+            }
+          },
+          {
+            "display_name": "Description",
+            "uid": "description",
+            "data_type": "text",
+            "mandatory": true,
+            "unique": false,
+            "multiple": false,
+            "field_metadata": {
+              "description": "Brief description of the step",
+              "instruction": "e.g., 'Set 3 priorities', 'Read or watch something useful'"
+            }
+          },
+          {
+            "display_name": "Order",
+            "uid": "order",
+            "data_type": "number",
+            "mandatory": false,
+            "unique": false,
+            "multiple": false,
+            "field_metadata": {
+              "description": "Display order (1, 2, 3, etc.)",
+              "instruction": "Leave blank to use default order"
+            }
+          }
+        ]
+      },
+      {
+        "display_name": "Date",
+        "uid": "date",
+        "data_type": "isodate",
+        "mandatory": false,
+        "unique": false,
+        "multiple": false,
+        "field_metadata": {
+          "description": "Date these steps should be displayed",
+          "instruction": "Optional: Select a specific date for these steps"
+        }
+      },
+      {
+        "display_name": "Active",
+        "uid": "active",
+        "data_type": "boolean",
+        "mandatory": false,
+        "unique": false,
+        "multiple": false,
+        "field_metadata": {
+          "description": "Whether this steps collection is currently active",
+          "instruction": "Enable to make this the current steps list"
+        }
+      }
+    ],
+    "options": {
+      "title": "title",
+      "publishable": true,
+      "is_page": false,
+      "singleton": false,
+      "sub_title": ["date"],
+      "url_pattern": "/:title",
+      "url_prefix": "/steps/"
+    }
+  }
+}

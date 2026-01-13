@@ -1,0 +1,26 @@
+{
+  "entry": {
+    "title": "Daily Steps - January 13, 2026",
+    "steps": [
+      {
+        "step_title": "Plan your day",
+        "description": "Set 3 priorities",
+        "order": 1
+      },
+      {
+        "step_title": "Learn one new thing",
+        "description": "Read or watch something useful",
+        "order": 2
+      },
+      {
+        "step_title": "Reflect on progress",
+        "description": "Note one win today",
+        "order": 3
+      }
+    ],
+    "date": "2026-01-13",
+    "active": true,
+    "tags": [],
+    "locale": "en-us"
+  }
+}

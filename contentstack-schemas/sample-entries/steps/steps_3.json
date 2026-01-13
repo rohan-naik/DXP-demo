@@ -1,0 +1,31 @@
+{
+  "entry": {
+    "title": "Daily Steps - January 15, 2026",
+    "steps": [
+      {
+        "step_title": "Clear your workspace",
+        "description": "5 minutes of organizing",
+        "order": 1
+      },
+      {
+        "step_title": "Deep work session",
+        "description": "30 minutes of focused work",
+        "order": 2
+      },
+      {
+        "step_title": "Take a break",
+        "description": "Step outside for fresh air",
+        "order": 3
+      },
+      {
+        "step_title": "Review your goals",
+        "description": "Align today's work with bigger picture",
+        "order": 4
+      }
+    ],
+    "date": "2026-01-15",
+    "active": false,
+    "tags": [],
+    "locale": "en-us"
+  }
+}

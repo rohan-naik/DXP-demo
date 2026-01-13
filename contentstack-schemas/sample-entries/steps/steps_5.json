@@ -1,0 +1,26 @@
+{
+  "entry": {
+    "title": "Daily Steps - January 17, 2026",
+    "steps": [
+      {
+        "step_title": "Hydrate first thing",
+        "description": "Start with a glass of water",
+        "order": 1
+      },
+      {
+        "step_title": "Complete one challenging task",
+        "description": "Tackle something you've been avoiding",
+        "order": 2
+      },
+      {
+        "step_title": "Take a creativity break",
+        "description": "Doodle, sketch, or brainstorm freely",
+        "order": 3
+      }
+    ],
+    "date": "2026-01-17",
+    "active": false,
+    "tags": [],
+    "locale": "en-us"
+  }
+}

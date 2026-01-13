@@ -1,0 +1,31 @@
+{
+  "entry": {
+    "title": "Daily Steps - January 16, 2026",
+    "steps": [
+      {
+        "step_title": "Start with intention",
+        "description": "Set your focus for the day",
+        "order": 1
+      },
+      {
+        "step_title": "Learn from feedback",
+        "description": "Ask for one piece of constructive input",
+        "order": 2
+      },
+      {
+        "step_title": "Practice saying no",
+        "description": "Protect your priorities",
+        "order": 3
+      },
+      {
+        "step_title": "Evening wind-down",
+        "description": "Disconnect 30 minutes before bed",
+        "order": 4
+      }
+    ],
+    "date": "2026-01-16",
+    "active": false,
+    "tags": [],
+    "locale": "en-us"
+  }
+}
