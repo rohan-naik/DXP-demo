@@ -1,51 +1,45 @@
-import Contentstack from 'contentstack'
+import axios from 'axios'
 
-const Stack = Contentstack.Stack({
-  api_key: import.meta.env.VITE_CONTENTSTACK_API_KEY || '',
-  delivery_token: import.meta.env.VITE_CONTENTSTACK_DELIVERY_TOKEN || '',
-  environment: import.meta.env.VITE_CONTENTSTACK_ENVIRONMENT || 'dev2'
-})
-
-export const getActiveQuote = async () => {
+export const getActiveSteps = async () => {
   try {
-    const query = Stack.ContentType('daily_quote').Query()
-    query.where('active', true)
-    query.limit(1)
-    const result = await query.find()
-    
-    if (result[0] && result[0].length > 0) {
-      const entry = result[0][0]
-      return {
-        text: entry.quote_text,
-        author: entry.author
-      }
+    const headers = {
+      access_token: import.meta.env.VITE_CONTENTSTACK_DELIVERY_TOKEN,
+      api_key: import.meta.env.VITE_CONTENTSTACK_API_KEY,
     }
-    return null
+    const params = {
+      locale: 'en-us',
+      environment: import.meta.env.VITE_CONTENTSTACK_ENVIRONMENT,
+    }
+      const responseApi = await axios({
+        method: 'GET',
+        url: 'https://cdn.contentstack.io/v3/content_types/daily_steps/entries',
+        headers: headers,
+        params: params,
+      })
+    return responseApi.data.entries
   } catch (error) {
-    console.error('Error fetching quote:', error)
+    console.error('Error fetching steps:', error)
     return null
   }
 }
 
-export const getActiveSteps = async () => {
+export const getActiveQuote = async () => {
   try {
-    const query = Stack.ContentType('daily_steps').Query()
-    query.where('active', true)
-    query.limit(1)
-    const result = await query.find()
-    
-    if (result[0] && result[0].length > 0) {
-      const entry = result[0][0]
-      return entry.steps
-        .sort((a, b) => (a.order || 0) - (b.order || 0))
-        .map((step, index) => ({
-          id: index + 1,
-          title: step.step_title,
-          description: step.description,
-          completed: false
-        }))
+    const headers = {
+      access_token: import.meta.env.VITE_CONTENTSTACK_DELIVERY_TOKEN,
+      api_key: import.meta.env.VITE_CONTENTSTACK_API_KEY,
     }
-    return null
+    const params = {
+      locale: 'en-us',
+      environment: import.meta.env.VITE_CONTENTSTACK_ENVIRONMENT,
+    }
+      const responseApi = await axios({
+        method: 'GET',
+        url: 'https://cdn.contentstack.io/v3/content_types/daily_quote/entries',
+        headers: headers,
+        params: params,
+      })
+    return responseApi.data.entries
   } catch (error) {
     console.error('Error fetching steps:', error)
     return null

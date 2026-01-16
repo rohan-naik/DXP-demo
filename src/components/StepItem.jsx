@@ -10,12 +10,12 @@ function StepItem({ step, onToggle }) {
         checked={step.completed || false}
         onChange={onToggle}
         className="checkbox-custom mt-1"
-        aria-label={`Mark "${step.title}" as ${step.completed ? 'incomplete' : 'complete'}`}
+        aria-label={`Mark "${step.step_title}" as ${step.completed ? 'incomplete' : 'complete'}`}
       />
       
       <div className="flex-1">
         <h3 className="step-title text-base font-medium text-neutral-800 mb-1">
-          {step.title}
+          {step.step_title}
         </h3>
         <p className="text-sm text-neutral-500">
           {step.description}

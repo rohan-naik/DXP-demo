@@ -14,17 +14,13 @@ function App() {
   useEffect(() => {
     const fetchContent = async () => {
       try {
-        const [quoteData, stepsData] = await Promise.all([
-          getActiveQuote(),
-          getActiveSteps()
-        ])
-        
+        const quoteData = await getActiveQuote()
         if (quoteData) {
-          setQuote(quoteData)
+          setQuote(quoteData[0])
         }
-        
+        const stepsData = await getActiveSteps()     
         if (stepsData) {
-          setSteps(stepsData)
+          setSteps(stepsData[0].steps)
         }
       } catch (error) {
         console.error('Error fetching content from Contentstack:', error)
@@ -36,10 +32,24 @@ function App() {
     fetchContent()
   }, [])
 
-  const toggleStep = (id) => {
+  const toggleStep = (order) => {
     setSteps(steps.map(step =>
-      step.id === id ? { ...step, completed: !step.completed } : step
+      step.order === order ? { ...step, completed: !step.completed } : step
     ))
+  }
+
+  const addStep = (title, description) => {
+    const newStep = {
+      order: steps.length + 1,
+      step_title: title,
+      description: description,
+      completed: false
+    }
+    setSteps([...steps, newStep])
+  }
+
+  const deleteStep = (order) => {
+    setSteps(steps.filter(step => step.order !== order))
   }
 
   return (
@@ -47,7 +57,12 @@ function App() {
       <Header />
       <main className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 pt-8">
         <QuoteCard quote={quote} />
-        <StepForwardList steps={steps} onToggle={toggleStep} />
+        <StepForwardList 
+          steps={steps} 
+          onToggle={toggleStep} 
+          onAdd={addStep}
+          onDelete={deleteStep}
+        />
       </main>
     </div>
   )

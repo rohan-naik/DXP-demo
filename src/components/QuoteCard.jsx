@@ -11,7 +11,7 @@ function QuoteCard({ quote }) {
         </svg>
         <div className="flex-1">
           <p className="text-xl text-neutral-700 leading-relaxed mb-4 font-light italic">
-            {quote.text}
+            {quote.quote_text}
           </p>
           <p className="text-sm text-neutral-500 font-medium">
             — {quote.author}
