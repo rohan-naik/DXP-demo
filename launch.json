@@ -10,15 +10,15 @@
   "env_variables": [
     {
       "key": "VITE_CONTENTSTACK_API_KEY",
-      "value": ""
+      "value": "blt95df8a9d4da2a3fb"
     },
     {
       "key": "VITE_CONTENTSTACK_DELIVERY_TOKEN",
-      "value": ""
+      "value": "cs2f86ee149b8998962f02ddaf"
     },
     {
       "key": "VITE_CONTENTSTACK_ENVIRONMENT",
-      "value": "dev2"
+      "value": "blt16e5be33bd1906f1"
     }
   ]
 }
